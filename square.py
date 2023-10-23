@@ -4,9 +4,11 @@ import math
 from utils import *
 
 grid_width = 256
-y_multiple = 2
+y_multiple = 1.7
+image = 'assets/image_transparent.png'
+pcd = 'assets/PCD_ascii.pcd'
 
-image = Image.open('assets/Roden_image_transparent.png').convert("RGBA")
+image = Image.open(image).convert("RGBA")
 image_array = np.array(image)
 image_width, image_height = image.size
 
@@ -65,7 +67,7 @@ def load_pcd(filename):
                 reading_data = True
     return np.array(points)
 
-topo_pcd_data = load_pcd('assets/Roden_5_subdiv_no_vert_lines_ascii.pcd')
+topo_pcd_data = load_pcd(pcd)
 
 # Extract X, Y, Z coordinates
 topo_x = topo_pcd_data[:, 0]

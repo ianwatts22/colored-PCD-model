@@ -6,6 +6,10 @@ This library is for creating a colored, evenly-spaced-grid 3D point cloud (.pcd)
 
 Created for use case of Google Earth derived 3D assets, which didn't provide the desired result as they were tile-y and unevenly dotted..
 
+3D geometry PCD files need to be ASCII (usually come in binary), output file will be in ASCII
+
+- [How to convert PCD between binary and ASCII](https://chat.openai.com/share/a913515b-7a02-4dc9-9915-40e3aeeae443)
+
 PCD files need to be Y up.
 Adjust `grid_width` to adjust resolution
 Adjust `y_multiple` to adjust the mutliplier on y-values, to make topography more or less drastic.

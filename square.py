@@ -5,6 +5,7 @@ from utils import *
 
 grid_width = 256
 y_multiple = 1.7
+search_radius_multiple = 0.1 / (grid_width / 256)
 image = 'assets/image_transparent.png'
 pcd = 'assets/PCD_ascii.pcd'
 
@@ -84,7 +85,6 @@ topo_kdtree = cKDTree(topo_pcd_data[:, [0, 2]])  # Use only X and Z for matching
 y_values = np.zeros(len(pcd_data))
 
 # Define the initial search radius for Y-value
-search_radius_multiple = 0.1
 search_radius = search_radius_multiple * (grid_width / 64) * grid_step
 
 # Search for nearest neighbors
